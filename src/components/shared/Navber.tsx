@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "@/assets/book.ico";
+import Link from "next/link";
 
 const Navber = () => {
   return (
@@ -35,7 +36,7 @@ const Navber = () => {
               </li>
 
               <li>
-                <a>Listed Books</a>
+                <Link href="/books">Books</Link>
               </li>
               <li>
                 <a>Pages to Read</a>
@@ -53,7 +54,7 @@ const Navber = () => {
             </li>
 
             <li>
-              <a>Listed Books</a>
+              <Link href="/books">Books</Link>
             </li>
             <li>
               <a>Pages to Read</a>

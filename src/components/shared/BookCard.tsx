@@ -1,7 +1,13 @@
+import { IBook } from "@/types/books.type";
 import React from "react";
 import { FaStar, FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
-const BookCard = ({ book }) => {
+interface IBookCardProps {
+  book: IBook;
+}
+
+const BookCard = ({ book }: IBookCardProps) => {
   const {
     bookName,
     author,
@@ -56,10 +62,12 @@ const BookCard = ({ book }) => {
             <p className="font-semibold text-slate-700">{totalPages}</p>
           </div>
 
-          <button className="flex items-center gap-2 rounded-full bg-slate-900 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-red-950">
-            Details
-            <FaArrowRight className="text-[10px]" />
-          </button>
+          <Link href={`/books/${book.bookId}`}>
+            <button className="flex items-center gap-2 rounded-full bg-slate-900 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-red-950">
+              Details
+              <FaArrowRight className="text-[10px]" />
+            </button>
+          </Link>
         </div>
       </div>
     </article>
