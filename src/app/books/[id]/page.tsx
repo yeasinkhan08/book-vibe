@@ -2,6 +2,7 @@ import React from "react";
 import { IBook } from "../../../types/books.type";
 import Image from "next/image";
 import ReadButton from "@/components/bookDetails/ReadButton";
+import WishListButton from "@/components/bookDetails/WishListButton";
 
 interface IBookDetailsPageProps {
   params: Promise<{
@@ -117,9 +118,7 @@ const booksDetailsPage = async ({ params }: IBookDetailsPageProps) => {
           <div className="flex gap-2 pt-2">
             <ReadButton book={book} />
 
-            <button className="rounded-md bg-cyan-500 px-5 py-2 text-sm font-medium text-white transition hover:bg-cyan-600">
-              Wishlist
-            </button>
+            <WishListButton book={book} />
           </div>
         </div>
       </div>
