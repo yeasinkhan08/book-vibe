@@ -1,6 +1,7 @@
 import React from "react";
 import { IBook } from "../../../types/books.type";
 import Image from "next/image";
+import ReadButton from "@/components/bookDetails/ReadButton";
 interface IBookDetailsPageProps {
   params: Promise<{
     id: string;

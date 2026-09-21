@@ -20,7 +20,7 @@ const Books = async () => {
           Explore Our Populer Collection
         </p>
 
-        <h1 className="text-3xl font-bold text-slate-900 md:text-4xl">
+        <h1 className="text-3xl font-bold text-slate-900 md:text-4xl gap-2">
           Discover Your Next{" "}
           <span className="text-amber-600">Favorite Book</span>
         </h1>
