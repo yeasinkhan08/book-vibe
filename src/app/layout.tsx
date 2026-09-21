@@ -30,6 +30,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <BooksProvider>
           <Navber />
           {children}
+
+          <ToastContainer />
         </BooksProvider>
       </body>
     </html>

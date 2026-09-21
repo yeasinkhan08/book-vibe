@@ -5,9 +5,13 @@ import { BooksContext } from "@/context/BookContext";
 import React, { useContext } from "react";
 
 const ListedBooks = () => {
-  const { readBooks } = useContext(BooksContext);
-  console.log(readBooks);
-  return <div>listed books</div>;
+  const { readBook, wishlist } = useContext(BooksContext);
+  console.log(readBook, wishlist);
+  return (
+    <div>
+      listed books | Total Read books:{readBook.length} <br /> {wishlist.lenght}
+    </div>
+  );
 };
 
 export default ListedBooks;
