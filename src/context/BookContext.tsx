@@ -1,28 +1,23 @@
 "use client";
 
-import { create } from "domain";
-import React, { ReactNode, use, useState } from "react";
-import { createContext } from "vm";
+import React, { ReactNode, useState } from "react";
+import { createContext } from "react";
 
-const BooksContext = createContext({});
+export const BooksContext = createContext({});
 
 const BooksProvider = ({ children }: { children: ReactNode }) => {
-  const [readBooks, setReadbooks] = useState([]);
-  const [wishList, setWishList] = useState([]);
+  const [readBook, setReadBook] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   const shareData = {
-    readBooks,
-    setReadbooks,
-    wishList,
-    setWishList,
+    readBook,
+    setReadBook,
+    wishlist,
+    setWishlist,
   };
 
   return (
-    <div>
-      <BooksContext.Provider value={shareData}>
-        {children}
-      </BooksContext.Provider>
-    </div>
+    <BooksContext.Provider value={shareData}>{children}</BooksContext.Provider>
   );
 };
 
