@@ -75,7 +75,7 @@ const booksDetailsPage = async ({ params }: IBookDetailsPageProps) => {
           <div className="flex flex-wrap items-center gap-3 border-b border-t border-slate-200 py-4">
             <span className="text-sm font-semibold text-slate-800">Tag</span>
 
-            {book.tags.map((tag) => (
+            {book.tags.map((tag: string) => (
               <span
                 key={tag}
                 className="rounded-full bg-green-50 px-3 py-1 text-xs font-medium text-green-600"
