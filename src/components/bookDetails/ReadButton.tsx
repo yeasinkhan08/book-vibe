@@ -4,6 +4,7 @@ import { IBook } from "@/types/books.type";
 import React, { useContext } from "react";
 
 import { BooksContext } from "@/context/BookContext";
+import { toast } from "react-toastify";
 
 const ReadButton = ({ book }: { book: IBook }) => {
   const { readBook, setReadBook } = useContext(BooksContext);
@@ -11,6 +12,7 @@ const ReadButton = ({ book }: { book: IBook }) => {
     console.log(book);
 
     setReadBook([...readBook, book]);
+    toast.success(`You have added${book.bookName} to your readlist `);
   };
 
   return (
